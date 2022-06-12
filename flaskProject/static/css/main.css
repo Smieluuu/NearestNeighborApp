@@ -1,0 +1,16 @@
+.topic h1,
+h2 {
+  display: flex;
+  justify-content: center;
+}
+.ok {
+  display: flex;
+  flex-direction: column;
+}
+.topic {
+  justify-content: center;
+}
+form input {
+  padding-top: 10px;
+  justify-content: center;
+}

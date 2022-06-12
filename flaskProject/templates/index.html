@@ -1,0 +1,39 @@
+<title>Tittle</title>
+<link rel="stylesheet" href="../static/css/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+<div class="topic">
+  <div>
+    <div>
+      <hr />
+      {% block body %} {% for task in tasks %}
+      <p>{{task.longitude}}</p>
+      {% endfor %}
+
+      <form action="/" method="POST" autocomplete="off">
+        <label for="name">Miasto:</label><br />
+        <input type="text" name="Miasto" placeholder="Miasto" /><br />
+        <label for="name">Kordy:</label><br />
+        <input type="text" name="Kordy" placeholder="Kordy" /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <div class="ok">
+      {% for i in points %}
+      {{i.name, i.coordinates}}
+      <a href="/delete?id={{i.id}}">Delete</a></td>
+      {% endfor %} 
+      <a href="/path">cos</a>
+      droga:
+      {% if ok == 'Nie ma zadnych drog' %}
+      <br> Nie ma drog :(
+      {% else %}
+      {% for i in ok %}
+      <br>
+      {{i.name}}
+      {% endfor %}
+      {% endif %}
+      {% endblock %}
+    </div>
+  </div>
+</div>
